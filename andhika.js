@@ -1,1 +1,0 @@
-console.log("Kakak pacarnya mba yg jaga di recepcionist depan ya?");
