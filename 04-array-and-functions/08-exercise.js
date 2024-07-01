@@ -1,6 +1,6 @@
 // BMI Calculator
-function BMICalculator(weight, height) {
-  const BMI = weight / height;
+function BMICalculator(weight = 50, height = 2) {
+  const BMI = weight / height ** 2;
 
   if (BMI < 18.5) {
     return "less wight";
@@ -15,4 +15,5 @@ function BMICalculator(weight, height) {
   }
 }
 
-console.log(BMICalculator(57, 172));
+console.log(BMICalculator(57, 1.72));
+console.log(BMICalculator());
