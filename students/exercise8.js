@@ -103,19 +103,19 @@ class ShootingGame {
 
     start() {
         while (this.player1.health > 0 && this.player2.health > 0) {
-            player1.showStatus();
-            player2.showStatus();
+            this.player1.showStatus();
+            this.player2.showStatus();
 
             const item1 = this.getRandomItem();
-            player1.useItem(item1);
+            this.player1.useItem(item1);
             const item2 = this.getRandomItem();
-            player2.useItem(item2);
+            this.player2.useItem(item2);
 
-            player1.damage(player2.power);
-            player2.damage(player1.power);
+            this.player1.damage(this.player2.power);
+            this.player2.damage(this.player1.power);
         }
 
-        if (player1.health > 0 && player2.health <= 0) {
+        if (this.player1.health > 0 && this.player2.health <= 0) {
             console.log(`Player ${this.player1.name} wins!`);
         } else {
             console.log(`Player ${this.player2.name} wins!`);
