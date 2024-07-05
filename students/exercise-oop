@@ -1,0 +1,133 @@
+// 1. Data Students
+const students = [
+    {
+        name: "Jovi", 
+        email: "jovi@gmail.com", 
+        age: new Date("2006-07-10"), 
+        score: 95
+    },
+    {
+        name: "Jason", 
+        email: "jason@gmail.com", 
+        age: new Date("2005-11-07"), 
+        score: 85
+    },
+    {
+        name: "John", 
+        email: "john@gmail.com", 
+        age: new Date("2006-11-03"), 
+        score: 80
+    },
+];
+
+function calculate(students) {
+    let totalScore = 0;
+    let lowestScore = Infinity;
+    let highestScore = 0;
+
+    let oldAge = new Date(-Infinity);
+    let youngAge = new Date(Infinity);
+    let totalYears = 0;
+
+    for (const student of students) {
+        const studentAge = student.age;
+        totalYears += calculateAgeInYears(studentAge);
+        oldAge = new Date(Math.max(oldAge.getTime(), studentAge.getTime()));
+        youngAge = new Date(Math.min(youngAge.getTime(), studentAge.getTime()));
+        
+        const studentScore = student.Score;
+        totalScore += studentScore;
+        highestScore = Math.max(highestScore, studentScore);
+        lowestScore = Math.min(lowestScore, studentScore);
+    };
+
+    const averageScore = totalScore / students.length;
+    const averageAge = totalYears / students.length;
+
+    const oldestAge = oldAge.toLocaleDateString();
+    const youngestAge = youngAge.toLocaleDateString();
+
+
+    return {
+        Score: {
+          Highest: highestScore,
+          Lowest: lowestScore,
+          Average: averageScore
+        },
+        Age: {
+          Highest: oldestAge,
+          Lowest: youngestAge, 
+          Average: averageAge.toFixed(2)
+        },
+    };
+};
+
+function calculateAgeInYears(birthDate) {
+    const today = new Date();
+    const ageInMilliSecond = today.getTime() - birthDate.getTime();
+    const ageInYears = ageInMilliSecond / (1000 * 60 * 60 * 24 * 365);
+    return ageInYears;
+};
+
+
+const result = calculate(students);
+console.log(result);
+
+
+// 2. Transactions
+class Product {
+    constructor(nama, harga) {
+        this.nama = nama;
+        this.harga = harga;
+    }
+}
+
+class Transaction {
+    constructor() {
+        this.total = 0;
+        this.product = {};
+    }
+
+    addToCart(product, qty) {
+        if (product.name in this.product) {
+            this.product[product.name].qty += qty;
+        } else {
+            this.product[product.name] = {product, qty}
+        }
+        console.log(this.product);
+        this.total += product.price * qty;
+    }
+
+    showTotal() {
+        console.log(`Total: $${this.total}`);
+    }
+
+    checkout() {
+        console.log("Transaction finalized!");
+
+        for (const key in this.product) {
+            let productName = key;
+            let productQty = this.product[key].qty;
+            let productTotalPrice = this.product[key].product.price * productQty;
+            console.log(`${productQty} x ${productName} - $${productTotalPrice}`);
+        }
+        console.log(`Total: $${this.total}`);
+    }
+}
+
+const apple = new Product("Apple", 5000);
+const banana = new Product("Banana", 2000);
+const mango = new Product("Mango", 12000);
+const guava = new Product("Guava", 8000);
+
+console.log(apple);
+console.log(banana);
+
+const transaction = new Transaction();
+transaction.addToCart(apple, 5);
+transaction.addToCart(banana, 15);
+transaction.addToCart(mango, 3);
+transaction.addToCart(guava, 3);
+
+transaction.showTotal();
+transaction.checkout();
