@@ -9,4 +9,5 @@ https://leetcode.com/u/69dqacueZU/
 6. ![soal-easy-6 - 58-length-of-last-word](soal-easy-6.png)
 7. ![soal-easy-7 - 136-single-number](soal-easy-7.png)
 8. ![soal-easy-8 - 66-plus-one](soal-easy-8.png)
-9. ![soal-medium-1 - 12-integer-to-roman](soal-medium-1.png)
+9. ![soal-easy-9 - 242-valid-anagram](soal-easy-9.png)
+10. ![soal-medium-1 - 12-integer-to-roman](soal-medium-1.png)
