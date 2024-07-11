@@ -130,3 +130,16 @@ function merge(leftArray, rightArray) {
 console.log(mergeSort([-6, 20, 8, -2, 4]));
 // console.log(mergeSort([-6, 20, 8, -2, 4, -Infinity]));
 // console.log(mergeSort([-6, 20, 8, -2, 4, 123, 3, 4, 5, 1]));
+
+if (
+  userId && isVerified && hasPermission && permissionLevel === 3
+    ? true
+    : permissionLevel === 2
+    ? true
+    : permissionLevel === 1
+    ? true
+    : permissionLevel === 0
+    ? true
+    : false
+) {
+}
