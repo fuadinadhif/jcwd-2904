@@ -17,7 +17,6 @@ function anagram(s, t) {
     return false;
   }
 
-  let result = true;
   let stats1 = {};
   let stats2 = {};
 
@@ -38,14 +37,14 @@ function anagram(s, t) {
   }
 
   for (key in stats1) {
-    if (stats1[key] === stats2[key]) {
-      result = true;
-    } else {
+    if (stats1[key] !== stats2[key]) {
       return false;
     }
   }
 
-  return result;
+  return true;
 }
 
 console.log(anagram("anagram", "nagaram"));
+console.log(anagram("cat", "car"));
+console.log(anagram("cat", "act"));

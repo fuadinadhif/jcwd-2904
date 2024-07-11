@@ -13,4 +13,6 @@ https://leetcode.com/u/69dqacueZU/
 10. ![soal-easy-10 - 20-valid-parentheses](soal-easy-10.png)
 11. ![soal-easy-11 - 70-climbing-stairs](soal-easy-11.png)
 12. ![soal-easy-12 - 69-sqrt(x)](soal-easy-12.png)
-13. ![soal-medium-1 - 12-integer-to-roman](soal-medium-1.png)
+13. ![soal-easy-13 - 125-valid-palindrome](soal-easy-13.png)
+14. ![soal-easy-14 - 258-add-digits](soal-easy-14.png)
+15. ![soal-medium-1 - 12-integer-to-roman](soal-medium-1.png)
