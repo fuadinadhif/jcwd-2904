@@ -16,3 +16,5 @@ https://leetcode.com/u/69dqacueZU/
 13. ![soal-easy-13 - 125-valid-palindrome](soal-easy-13.png)
 14. ![soal-easy-14 - 258-add-digits](soal-easy-14.png)
 15. ![soal-medium-1 - 12-integer-to-roman](soal-medium-1.png)
+16. ![soal-meidum-2 - 1190-reverse-substrings-between-each-pair-of-parentheses](soal-meidum-2.png)
+17. ![soal-medium-3 - 167-two-sum-II](soal-medium-3.png)

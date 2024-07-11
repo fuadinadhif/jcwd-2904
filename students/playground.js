@@ -80,18 +80,70 @@
 
 // Callback
 
-function greet(name, cb) {
-  console.log(`Hai, ${name}!`);
+// function greet(name, cb) {
+//   console.log(`Hai, ${name}!`);
 
-  if (cb) {
-    cb();
+//   if (cb) {
+//     cb();
+//   }
+// }
+
+// function sayGoodBye() {
+//   console.log("See you later!");
+// }
+
+// greet("Bejo", function () {
+//   greet("Tejo", sayGoodBye);
+// });
+
+// let janji = new Promise((resolve, reject) => {
+//   const error = false;
+
+//   if (error) {
+//     reject("Sorry, rejected!");
+//   } else {
+//     resolve("OK! Resolved!");
+//   }
+// });
+
+// // ver 1
+// janji.then(
+//   (data) => {
+//     console.log(data);
+//   },
+//   (err) => {
+//     console.log(err);
+//   }
+// );
+
+// // ver 2
+// janji.then((data) => {
+//   console.log(data);
+// });
+
+// janji.catch((err) => {
+//   console.log(err);
+// });
+
+// ver 3
+// janji.then((data) => console.log(data)).catch((err) => console.log(err));
+
+// console.log(("b" + "a" + +"a" + "a").toLowerCase());
+
+// console.log(018 - 015)
+
+//  Async await
+async function getUsers() {
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/1"
+    );
+
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
   }
 }
 
-function sayGoodBye() {
-  console.log("See you later!");
-}
-
-greet("Bejo", function () {
-  greet("Tejo", sayGoodBye);
-});
+getUsers();
