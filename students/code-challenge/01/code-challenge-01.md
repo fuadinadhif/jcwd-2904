@@ -27,4 +27,4 @@
 
 1. ![soal Medium 1](image-8.png)
 2. ![soal Medium 2](image-9.png)
-3.
+3. ![soal Medium 3](image-10.png)
