@@ -1,5 +1,7 @@
 # Code Challenge
 
+Saya Andhika.
+
 ## Link Leetcode
 
 [Link LeetCode](https://leetcode.com/u/anchansp/)
@@ -15,3 +17,11 @@
 7. ![Soal Easy 7](soal-ez7.png)
 8. ![Soal Easy 8](soal-ez8.png)
 9. ![Soal Easy 9](soal-ez9.png)
+10. ![Soal Easy 10](soal-ez10.png)
+11. ![Soal Easy 11](soal-ez11.png)
+12. ![Soal Easy 12](soal-ez12.png)
+13. ![Soal Easy 13](soal-ez13.png)
+14. ![Soal Easy 14](soal-ez14.png)
+15. ![Soal Medium 1](soal-mid1.png)
+16. ![Soal Medium 2](soal-mid2.png)
+17. ![Soal Medium 3](soal-mid3.png)
