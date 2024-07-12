@@ -1,6 +1,6 @@
 # Code Challenge
 
-Saya Andhika.
+Halo, saya Andhika.
 
 ## Link Leetcode
 
