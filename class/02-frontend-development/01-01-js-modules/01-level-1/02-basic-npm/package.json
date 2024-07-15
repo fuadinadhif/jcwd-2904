@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@stdlib/math-base-assert-is-odd": "^0.2.1"
+  }
+}
