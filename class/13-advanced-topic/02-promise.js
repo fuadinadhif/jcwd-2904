@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                                Basic Promise                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------- The Basic ------------------------------- */
 // let promise = new Promise((resolve, reject) => {
 //   const error = true;
 
@@ -9,15 +13,18 @@
 // });
 
 // console.log(promise);
+/* ---------------------------- End of The Basic ---------------------------- */
 
-// . then
+/* ----------------- Accessing Promise Value - Use dot then ----------------- */
 // promise.then(
 //   (data) => {
 //     console.log(data);
 //   },
 //   (error) => console.log(error)
 // );
+/* -------------- End of Accessing Promise Value - Use dot then ------------- */
 
+/* ------------------------- Dot then Error Handling ------------------------ */
 // promise
 //   .then((data) => {
 //     console.log(data);
@@ -26,8 +33,9 @@
 //   .finally(() => {
 //     console.log("I am absolute");
 //   });
+/* --------------------- End of Dot then Error Handling --------------------- */
 
-// // async / await
+/* ---------------- Accessing Promise Value - Use async/await --------------- */
 // async function invokePromise() {
 //   try {
 //     const result = await promise;
@@ -38,27 +46,30 @@
 // }
 
 // invokePromise();
+/* ------------ End of Accessing Promise Value - Use async/await ------------ */
 
-// try and catch
+/* ----------------------- Async/await Error Handling ----------------------- */
 // try {
 //   throw new Error("Ini error yang disengaja");
 //   console.log("Hai");
 // } catch (error) {
 //   console.error(error.message);
 // }
+/* -------------------- End of async/await Error Handling ------------------- */
 
-// Real Case
-async function getUsers() {
-  try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/1`
-    );
+/* -------------------- Promise Real Case Implementation -------------------- */
+// async function getUsers() {
+//   try {
+//     const response = await fetch(
+//       `https://jsonplaceholder.typicode.com/users/1`
+//     );
 
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-getUsers();
+// getUsers();
+/* ----------------- End of Promise Real Case Implementation ---------------- */
