@@ -25,7 +25,7 @@
       </ul>
     </header>
     <main>
-      <div>
+      <section>
         <figure style="">
           <img
             style="width: 100%"
@@ -34,20 +34,50 @@
           />
           <figcaption>A beaufiul sky</figcaption>
         </figure>
-      </div>
+      </section>
 
-      <div>
-        <h1>Title</h1>
+      <section>
+        <h2>Title</h2>
         <small><time datetime="2024-05-20">20 May 2024</time></small>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
           consectetur natus accusantium pariatur provident obcaecati,
           consequatur illo in?
         </p>
-      </div>
+      </section>
 
-      <div>
-        <h1>Third Section</h1>
+      <section>
+        <h2>First Section</h2>
+        <p>
+          <b>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</b>
+          Corporis ullam enim pariatur expedita sapiente itaque soluta facilis
+          ducimus? Ut in neque qui. Magnam tenetur nam non dolorem, minima rerum
+          voluptatem.
+        </p>
+        <p>
+          <i>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</i>
+          Accusamus assumenda optio ipsam iusto dicta consectetur necessitatibus
+          doloremque culpa temporibus?
+        </p>
+      </section>
+
+      <section>
+        <h2>Second Section</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
+          voluptatum similique est in possimus laudantium sapiente, fugiat.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus,
+          molestiae expedita nemo rem, similique eum officia totam, aperiam
+          beatae reiciendis cum repellendus natus odit autem vitae doloremque
+          laboriosam incidunt repudiandae!
+        </p>
+      </section>
+
+      <section>
+        <h2>Third Section</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
           odio. Eveniet ullam provident fugiat esse perspiciatis voluptatibus,
@@ -81,8 +111,52 @@
             <td>Row 3, Cell 3</td>
           </tr>
         </table>
-      </div>
+      </section>
+
+      <section>
+        <h2>Fourth Section</h2>
+        <form>
+          <fieldset>
+            <legend>Identity</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" />
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </fieldset>
+          <fieldset>
+            <legend>Feedback:</legend>
+            <label for="message">Message:</label>
+            <textarea name="message"></textarea>
+            <select>
+              <option value="1">1 star</option>
+              <option value="2">2 star</option>
+              <option value="3">3 star</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Are you satisfied?</legend>
+            <label for="yes">Yes</label>
+            <input type="radio" name="is-satisfied" id="yes" />
+            <label for="no">No</label>
+            <input type="radio" name="is-satisfied" id="no" />
+          </fieldset>
+          <fieldset>
+            <legend>What we can improve?</legend>
+            <input type="checkbox" id="topic" name="topic" />
+            <label for="topic">Topic</label>
+
+            <input type="checkbox" id="writing" name="writing" />
+            <label for="writing">Writing</label>
+
+            <input type="checkbox" id="design" name="design" />
+            <label for="design">Design</label>
+
+            <input type="checkbox" id="image" name="image" />
+            <label for="image">Image</label>
+          </fieldset>
+        </form>
+      </section>
     </main>
-    <footer></footer>
+    <footer>&copy; 2024</footer>
   </body>
 </html>
