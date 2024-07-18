@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      #content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 200px 100px 20px 10px;
+        grid-auto-rows: 50px;
+        max-width: 1000px;
+        gap: 50px;
+        /* justify-items: center;
+        align-items: center; */
+        /* border: 1px solid black; */
+      }
+
+      #content div {
+        background-color: lightskyblue;
+      }
+
+      #content div:nth-child(even) {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div class="kotak">1</div>
+      <div class="kotak">2</div>
+      <div class="kotak">3</div>
+      <div class="kotak">4</div>
+      <div class="kotak">5</div>
+      <div class="kotak">6</div>
+      <div class="kotak">7</div>
+      <div class="kotak">8</div>
+      <div class="kotak">9</div>
+      <div class="kotak">10</div>
+      <div class="kotak">11</div>
+      <div class="kotak">12</div>
+      <div class="kotak">13</div>
+      <div class="kotak">14</div>
+      <div class="kotak">15</div>
+    </div>
+  </body>
+</html>

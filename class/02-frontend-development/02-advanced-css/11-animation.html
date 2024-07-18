@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .planet,
+      .moon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+
+      .planet {
+        width: 100px;
+        height: 100px;
+        background-color: dodgerblue;
+        border-radius: 50%;
+      }
+
+      .moon {
+        width: 30px;
+        height: 30px;
+        background-color: silver;
+        border-radius: 50%;
+        animation: orbit 5000ms linear infinite;
+      }
+
+      @keyframes orbit {
+        from {
+          transform: rotate(0deg) translateX(150px);
+        }
+        to {
+          transform: rotate(360deg) translateX(150px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="planet"></div>
+      <div class="moon"></div>
+    </div>
+  </body>
+</html>

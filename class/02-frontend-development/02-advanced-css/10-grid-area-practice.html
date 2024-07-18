@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Area Practice</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 250px 1fr 250px;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas:
+          "a a a"
+          "m m m"
+          "f f f";
+        height: 100vh;
+        gap: 10px;
+      }
+
+      header {
+        grid-area: a;
+        background-color: orange;
+      }
+
+      main {
+        grid-area: m;
+        background-color: blanchedalmond;
+      }
+
+      footer {
+        grid-area: f;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <aside></aside>
+      <div></div>
+      <aside></aside>
+    </main>
+    <footer></footer>
+  </body>
+</html>
