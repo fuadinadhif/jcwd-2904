@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 7%);
+}
