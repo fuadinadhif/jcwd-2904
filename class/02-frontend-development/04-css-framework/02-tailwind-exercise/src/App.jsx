@@ -1,16 +1,20 @@
 import productDekstop from "./assets/images/image-product-desktop.jpg";
+import productMobile from "./assets/images/image-product-mobile.jpg";
 import cart from "./assets/images/icon-cart.svg";
 
 function App() {
   return (
-    <main className="bg-cream h-screen w-screen flex justify-center items-center text-regular font-montserrat text-dark-grayish-blue">
-      <div className="grid grid-cols-2 auto-rows-max rounded-lg overflow-hidden w-fit max-w-xl bg-white">
+    <main className="bg-cream min-h-screen min-w-screen flex justify-center items-center text-regular font-montserrat text-dark-grayish-blue px-6 py-8">
+      <div className="grid sm:grid-cols-2 sm:auto-rows-max rounded-lg overflow-hidden w-fit max-w-sm sm:max-w-xl bg-white">
         <div>
-          <img
-            src={productDekstop}
-            alt="Perfume bottle on top of a table surrounding by leafes"
-            className="h-full w-full object-cover"
-          />
+          <picture>
+            <source media="(max-width: 640px)" srcSet={productMobile} />
+            <img
+              src={productDekstop}
+              alt="Perfume bottle on top of a table surrounding by leafes"
+              className="h-full w-full object-cover"
+            />
+          </picture>
         </div>
         <div className="p-7">
           <p className="uppercase tracking-[0.25rem] mb-5">Perfume</p>
