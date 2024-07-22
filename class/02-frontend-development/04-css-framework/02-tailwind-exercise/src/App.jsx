@@ -4,7 +4,7 @@ import cart from "./assets/images/icon-cart.svg";
 function App() {
   return (
     <main className="bg-cream h-screen w-screen flex justify-center items-center text-regular font-montserrat text-dark-grayish-blue">
-      <div className="grid grid-cols-2 grid-rows-[400px] rounded-lg overflow-hidden w-fit max-w-xl bg-white">
+      <div className="grid grid-cols-2 auto-rows-max rounded-lg overflow-hidden w-fit max-w-xl bg-white">
         <div>
           <img
             src={productDekstop}
@@ -13,19 +13,21 @@ function App() {
           />
         </div>
         <div className="p-7">
-          <p className="uppercase tracking-[0.25rem]">Perfume</p>
-          <h1 className="font-fraunces text-3xl text-very-dark-blue">
+          <p className="uppercase tracking-[0.25rem] mb-5">Perfume</p>
+          <h1 className="font-fraunces text-3xl text-very-dark-blue mb-7">
             Gabrielle Essence Eau De Parfum
           </h1>
-          <p>
+          <p className="mb-5">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
-          <div>
-            <span>$149.99</span>
-            <span>$169.99</span>
+          <div className="flex items-center gap-5 mb-5">
+            <span className="font-fraunces text-dark-cyan text-3xl">
+              $149.99
+            </span>
+            <span className="line-through">$169.99</span>
           </div>
-          <button>
+          <button className="bg-dark-cyan w-full text-white flex p-4 rounded-lg justify-center gap-4">
             <img src={cart} alt="" />
             <span>Add to Cart</span>
           </button>
