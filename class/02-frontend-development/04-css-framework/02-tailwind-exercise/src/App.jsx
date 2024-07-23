@@ -4,36 +4,36 @@ import cart from "./assets/images/icon-cart.svg";
 
 function App() {
   return (
-    <main className="bg-cream min-h-screen min-w-screen flex justify-center items-center text-regular font-montserrat text-dark-grayish-blue px-6 py-8">
-      <div className="grid sm:grid-cols-2 sm:auto-rows-max rounded-lg overflow-hidden w-fit max-w-sm sm:max-w-xl bg-white">
+    <main className="min-w-screen flex min-h-screen items-center justify-center bg-cream px-6 py-8 font-montserrat text-regular text-dark-grayish-blue">
+      <div className="grid w-fit max-w-sm overflow-hidden rounded-xl bg-white sm:max-w-xl sm:auto-rows-max sm:grid-cols-2">
         <div>
           <picture>
             <source media="(max-width: 640px)" srcSet={productMobile} />
             <img
               src={productDekstop}
-              alt="Perfume bottle on top of a table surrounding by leafes"
-              className="h-full w-full object-cover"
+              alt="Perfume bottle on top of a table surrounding with leafes"
+              className="h-full w-full"
             />
           </picture>
         </div>
         <div className="p-7">
-          <p className="uppercase tracking-[0.25rem] mb-5">Perfume</p>
-          <h1 className="font-fraunces text-3xl text-very-dark-blue mb-7">
+          <p className="mb-5 uppercase tracking-[0.5em]">Perfume</p>
+          <h1 className="mb-7 font-fraunces text-4xl font-bold text-very-dark-blue">
             Gabrielle Essence Eau De Parfum
           </h1>
           <p className="mb-5">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
-          <div className="flex items-center gap-5 mb-5">
-            <span className="font-fraunces text-dark-cyan text-3xl">
+          <div className="mb-5 flex items-center gap-5">
+            <span className="font-fraunces text-3xl font-bold text-dark-cyan">
               $149.99
             </span>
             <span className="line-through">$169.99</span>
           </div>
-          <button className="bg-dark-cyan w-full text-white flex p-4 rounded-lg justify-center gap-4">
-            <img src={cart} alt="" />
-            <span>Add to Cart</span>
+          <button className="flex w-full justify-center gap-4 rounded-lg bg-dark-cyan p-4 text-white">
+            <img src={cart} alt="Cart icon" />
+            <span>Add to cart</span>
           </button>
         </div>
       </div>
