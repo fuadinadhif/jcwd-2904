@@ -1,0 +1,12 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.canvas-wrapper {
+  background: grey;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
