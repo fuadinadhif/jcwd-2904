@@ -1,4 +1,8 @@
-function Header({ name }: { name: string }) {
+import { useContext } from "react";
+import { NameContext } from "../App";
+
+function Header() {
+  const name = useContext(NameContext);
   const firstName = name.split(" ")[0];
   return (
     <header>

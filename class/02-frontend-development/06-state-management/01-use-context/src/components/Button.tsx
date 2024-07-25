@@ -5,8 +5,8 @@ function Button() {
 
   return (
     <div className="button-container">
-      {list.map((item) => (
-        <button>{item}</button>
+      {list.map((item, index) => (
+        <button key={index}>{item}</button>
       ))}
     </div>
   );

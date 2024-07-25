@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 
 import "./App.css";
 import Card from "./components/Card";
 import Header from "./components/Header";
+
+export const NameContext = createContext("");
 
 function App() {
   const [name, setName] = useState("Jhon Doe");
@@ -22,10 +24,10 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header name={name} />
-      <Card name={name} />;
-    </>
+    <NameContext.Provider value={name}>
+      <Header />
+      <Card />;
+    </NameContext.Provider>
   );
 }
 
