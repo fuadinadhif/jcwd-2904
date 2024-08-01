@@ -18,7 +18,7 @@ export default async function BookList() {
     return (
       <table className="text-sm w-full">
         <thead>
-          <tr className="grid grid-cols-4">
+          <tr className="grid grid-cols-[1fr_1fr_1fr_200px]">
             <th className="text-start">Title</th>
             <th className="text-start">Author</th>
             <th className="text-start">Subject</th>
@@ -27,7 +27,10 @@ export default async function BookList() {
         </thead>
         <tbody className="divide-y">
           {books.results.map((item: Book) => (
-            <tr key={item.id} className="grid grid-cols-4 py-2">
+            <tr
+              key={item.id}
+              className="grid grid-cols-[1fr_1fr_1fr_200px] py-2"
+            >
               <td>{item.title}</td>
               <td>{item.authors[0].name}</td>
               <td>{item.subjects[0]}</td>

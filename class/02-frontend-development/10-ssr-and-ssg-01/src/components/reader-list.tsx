@@ -7,7 +7,7 @@ interface Person {
 
 export default async function ReaderList() {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const readers = await response.json();
 

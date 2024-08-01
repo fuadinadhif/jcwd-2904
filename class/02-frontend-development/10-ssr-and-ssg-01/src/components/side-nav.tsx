@@ -6,14 +6,14 @@ import { usePathname } from "next/navigation";
 
 export default function SideNav() {
   const dashboardMenu = [
-    { name: "Home", href: "/dashboard" },
-    { name: "Reader List", href: "/dashboard/reader-list" },
-    { name: "Book List", href: "/dashboard/book-list" },
+    { name: "Dashboard", href: "/admin/dashboard" },
+    { name: "Reader List", href: "/admin/reader-list" },
+    { name: "Book List", href: "/admin/book-list" },
   ];
   const pathName = usePathname();
 
   return (
-    <aside className="bg-slate-400 p-4 rounded-lg w-48">
+    <aside className="bg-slate-400 p-4 rounded-lg min-w-56">
       <Logo className="max-w-24 mx-auto mb-5" />
 
       <nav>

@@ -1,4 +1,4 @@
-export default async function Page({ params }) {
+export default async function Page({ params }: { params: { id: string } }) {
   try {
     const response = await fetch(`https://gutendex.com/books/${params.id}/`);
     const book = await response.json();
