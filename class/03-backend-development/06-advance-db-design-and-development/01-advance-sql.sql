@@ -269,3 +269,6 @@ COMMIT;
 
 -- If errors
 ROLLBACK;
+
+SET autocommit = 0;
+SET autocommit = 1;
