@@ -208,5 +208,15 @@ npx prisma init
 ```
 
 ```
+// If we only want to adjust the database according to our model
+npx prisma db push
+
+// If we want to make migrations
 npx prisma migrate dev --name init
+
+// If we want to seed file independently
+npx prisma db seed
+
+// If we want to reset database data
+npx prisma migrate reset
 ```

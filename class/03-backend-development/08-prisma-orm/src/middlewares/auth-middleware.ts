@@ -8,7 +8,7 @@ export async function verifyToken(
   next: NextFunction
 ) {
   try {
-    const token = req.header("Authorization")?.replace("Bearer ", "");
+    const token = req.cookies.token;
 
     if (!token) res.status(401).json({ message: "No token provided" });
 
@@ -34,7 +34,7 @@ export async function adminGuard(
   next: NextFunction
 ) {
   try {
-    if ((req as any).user.role !== 1)
+    if ((req as any).user.roleId !== 1)
       res.status(401).json({ message: "You are not an admin" });
 
     next();

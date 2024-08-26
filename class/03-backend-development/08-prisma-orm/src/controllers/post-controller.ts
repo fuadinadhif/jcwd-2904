@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { PrismaClient, Prisma } from "@prisma/client";
+import cloudinary from "../config/cloudinary";
+import fs from "fs/promises";
 
 const prisma = new PrismaClient();
 
@@ -71,15 +73,24 @@ export async function searchPost(req: Request, res: Response) {
 
 export async function createPost(req: Request, res: Response) {
   try {
-    const { title, content, authorId, viewCount } = req.body;
+    const { title, content, authorId } = req.body;
+
+    if (!req.file) return res.status(400).json({ message: "No file uploaded" });
+
+    const cloudinaryData = await cloudinary.uploader.upload(req.file.path, {
+      folder: "images",
+    });
 
     await prisma.post.create({
       data: {
         title,
         content,
-        authorId,
+        authorId: Number(authorId),
+        imageUrl: cloudinaryData.secure_url,
       },
     });
+
+    fs.unlink(req.file.path);
 
     res.status(201).json({ message: "Post created" });
   } catch (error) {

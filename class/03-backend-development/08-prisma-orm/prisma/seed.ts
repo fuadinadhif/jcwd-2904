@@ -40,6 +40,7 @@ async function inputData() {
           {
             title: "Bismillah DKI 1",
             content: "Deklarasi Cagub dan Cawagub DKI Jakarta tahun 2023",
+            statistic: { create: {} },
           },
         ],
       },
@@ -56,6 +57,7 @@ async function inputData() {
           {
             title: "Ayo Jakarta Lebih Baik",
             content: "Konten sama kayak Anies",
+            statistic: { create: {} },
           },
         ],
       },
@@ -72,6 +74,7 @@ async function inputData() {
           {
             title: "Surprise Pasti Menang",
             content: "Dengan dukungan Jokowi dan Prabowo bismillah saya bisa!",
+            statistic: { create: {} },
           },
         ],
       },
