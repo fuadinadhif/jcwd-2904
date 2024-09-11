@@ -272,3 +272,10 @@ ROLLBACK;
 
 SET autocommit = 0;
 SET autocommit = 1;
+
+
+SELECT e.employee_id, e.first_name, e.last_name, DATEDIFF(CURDATE(), er.start_date) AS days_worked 
+FROM employment_records er 
+JOIN employees e ON er.employee_id = e.employee_id 
+ORDER BY days_worked DESC 
+LIMIT 5;

@@ -1,0 +1,28 @@
+version: "3.8" # It's recommended to use a more recent version of the Compose file format
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://andi:andipassword@db:5432/your_database
+    volumes:
+      - .:/usr/src/app
+    command: npm start # Ensure this matches how you start your Express app
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=andi
+      - POSTGRES_PASSWORD=andipassword
+      - POSTGRES_DB=your_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
